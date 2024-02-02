@@ -8,12 +8,12 @@ uri = "mongodb+srv://sud:1234@cluster0.qnwdzgg.mongodb.net/?retryWrites=true&w=m
 client = MongoClient(uri)
 db = client["ecommerce"]
 
-products_collection = db["products"]
-orders_collection = db["orders"]
+productsCollection = db["products"]
+ordersCollection = db["orders"]
 
 
 # Created index over price column since most of the queries are filtered out based on the price of the product
-products_collection.create_index("price")
+productsCollection.create_index("price")
 
 # Send a ping to confirm a successful connection
 try:

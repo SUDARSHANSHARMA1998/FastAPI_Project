@@ -1,4 +1,4 @@
-from database import products_collection
+from database import productsCollection
 
 
 def listAllProducts(limit, offset, min_price, max_price):
@@ -48,7 +48,7 @@ def listAllProducts(limit, offset, min_price, max_price):
         }}
     ]
 
-    result = list(products_collection.aggregate(pipeline))[0]
+    result = list(productsCollection.aggregate(pipeline))[0]
 
     return result
 
