@@ -33,6 +33,7 @@ http://127.0.0.1:8000/ecommerce/products?limit=1&min_price=100&max_price=900
 }
 ```
 
+
 `GET /ecommerce/orders`: 
 - Creates a new order with fields: createdOn, items, totalAmount, and userAddress.
 
@@ -64,12 +65,15 @@ Note - For more information checkout FastAPI inbuilt documentation -
 http://127.0.0.1:8000/docs
 ```
 
+
 ## Schemas
 
 > **All pydantic schemas are defined in schemas/schema.py**
 
 
+
 ### Collections
+
 ### Products Collection
 Each product represents a collection within a MongoDB database to store information about products.
 ```
@@ -103,8 +107,10 @@ It represents a collection within a MongoDB database to store information about 
 
 ```
 
+
 ## Getting Set Up
 Ensure Python, FastAPI, uvicorn, pydantic, and pymongo packages are installed.
+
 
 ## Run server
 Use this command to run the server
@@ -112,6 +118,7 @@ Use this command to run the server
 uvicorn main:app --reload
 ```
 Note - Connection with the **MongoDB** would be taken care automatically once the server starts running
+
 
 ## Code Structure
 - main.py runs the server using the uvicorn package.
