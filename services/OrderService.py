@@ -1,6 +1,7 @@
 from schemas.schema import Order
 from database import products_collection, orders_collection
 from bson import ObjectId
+from datetime import datetime
 
 
 def createOrderInstance(order: Order):
@@ -30,6 +31,7 @@ def createOrderInstance(order: Order):
             "country": order.userAddress.country,
             "zipCode": order.userAddress.zipCode
         },
+        "createdOn": datetime.utcnow()
     }
 
     # Insert order into MongoDB
